@@ -55,6 +55,7 @@ if config_env() == :prod do
 
   config :vsoi, VsoiWeb.Endpoint,
     url: [host: host, port: 443, scheme: "https"],
+    check_origin: ["https://vsoi.fly.dev", "https://verdesmartorganiku.com",  "https://www.verdesmartorganiku.com" ],
     http: [
       # Enable IPv6 and bind on all interfaces.
       # Set it to  {0, 0, 0, 0, 0, 0, 0, 1} for local network only access.
