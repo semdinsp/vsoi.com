@@ -47,12 +47,16 @@ RUN mix deps.compile
 
 COPY priv priv
 
-COPY assets/package*.json assets/
-RUN npm --prefix ./assets ci --progress=false --no-audit --loglevel=error
+#COPY assets/package*.json assets/
+# RUN npm --prefix ./assets ci --progress=false --no-audit --loglevel=error
 
 COPY lib lib
 
 COPY assets assets
+
+#SCOTT NEW DAISYUI 
+RUN cd assets && npm install
+# END SCOTT NEW
 
 # compile assets
 RUN mix assets.deploy
