@@ -168,7 +168,7 @@ defmodule VsoiWeb.CoreComponents do
        <small>Verde Smart Organiku International</small>
        <!--   WAS <img src="/images/logo.svg" width="30" />  -->
        </div>
-        <div class="flex justify-end  gap-4 font-semibold leading-2 ">
+        <div class="flex space-x-4 justify-end  gap-4 font-semibold leading-2 ">
          <a href="/products" class="rounded-lg flex justify-center hover:text-primary hover:bg-zinc-100   px-2 py-1 ">
            <.icon name="hero-photo" class="mr-1"/>
            <div class="max-sm:hidden">Products</div>
