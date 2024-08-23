@@ -160,23 +160,25 @@ defmodule VsoiWeb.CoreComponents do
 
   def appheader(assigns) do
     ~H"""
-    <header class="px-4 sm:px-6 lg:px-8 bg-primary">
+    <header class="px-4 sm:px-6 lg:px-8 w-full flex bg-primary ">
      <div class="flex items-center justify-between border-b border-zinc-100 py-1 text-sm">
        <div class="flex items-center gap-4">
        <.emojilogo />
+       VSOI
+       <small>Verde Smart Organiku International</small>
        <!--   WAS <img src="/images/logo.svg" width="30" />  -->
        </div>
-        <div class="flex items-center  text-white gap-4 font-semibold leading-2 ">
-         <a href="/products" class="rounded-lg flex justify-center hover:text-primary hover:bg-zinc-100 text-white  px-2 py-1 ">
+        <div class="flex justify-end  gap-4 font-semibold leading-2 ">
+         <a href="/products" class="rounded-lg flex justify-center hover:text-primary hover:bg-zinc-100   px-2 py-1 ">
            <.icon name="hero-photo" class="mr-1"/>
            <div class="max-sm:hidden">Products</div>
          </a>
-         <a href="/team" class="rounded-lg flex justify-center hover:text-black  text-white  px-2 py-1 hover:bg-zinc-100">
-          <.icon name="hero-envelope-open" class="mr-1"/>
+         <a href="/team" class="rounded-lg flex justify-center hover:text-black    px-2 py-1 hover:bg-zinc-100">
+          <.icon name="hero-user-group" class="mr-1"/>
           <div class="max-sm:hidden">Team</div>
          </a>
-         <a href="/vision" class="rounded-lg flex justify-center hover:text-black  text-white  px-2 py-1 hover:bg-zinc-100">
-          <.icon name="hero-envelope-open" class="mr-1"/>
+         <a href="/vision" class="rounded-lg flex justify-center hover:text-black   px-2 py-1 hover:bg-zinc-100">
+          <.icon name="hero-arrow-trending-up" class="mr-1"/>
           <div class="max-sm:hidden">Vision</div>
          </a>
        </div>
