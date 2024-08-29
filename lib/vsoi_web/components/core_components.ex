@@ -122,8 +122,8 @@ defmodule VsoiWeb.CoreComponents do
         class=" md:px-16 px-8 py-2 flex md:flex-row flex-col items-center gap-2 justify-between w-full">
         <!--<img class="items-center" src={@logosrc} alt="Alazheimer" height="30" width="30" />  -->
         <.emojilogo/>
-        <div class=" font-serif text-xs text-center text-white row-start-2">
-          2024 &copy; VSOI.com. <br />
+        <div class=" font-serif text-xs text-center row-start-2">
+          2024 &copy; Verde Smart Organiku International <br />
           <a href="/privacy" >Privacy Policy and Terms of Service</a>
 
         </div>
@@ -139,7 +139,7 @@ defmodule VsoiWeb.CoreComponents do
                 d="M0.892853 5.85693L11.3571 12.1502C11.678 12.3386 12.0824 12.4418 12.5 12.4418C12.9176 12.4418 13.322 12.3386 13.6429 12.1502L24.1071 5.85693"
                 stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
-            <a class="pl-3 text-white font-serif text-xs " href="mailto:info@alzheimer-memory.com"
+            <a class="pl-3font-serif text-xs " href="mailto:info@alzheimer-memory.com"
               target="_blank">info@alzheimer-memory.com</a>
           </div>
         </div>
