@@ -163,7 +163,7 @@ defmodule VsoiWeb.CoreComponents do
     <header class="px-4 sm:px-6 lg:px-8 w-full flex bg-primary ">
      <div class="flex items-center justify-between border-b border-zinc-100 py-1 text-sm">
        <div class="flex items-center gap-4">
-       <.emojilogo />
+       <img src="/images/vsoilogo.jpg" width="40" height="40" />
        VSOI
        <small>Verde Smart Organiku International</small>
        <!--   WAS <img src="/images/logo.svg" width="30" />  -->

@@ -34,11 +34,23 @@
                 </div>
             </div>
         </div>
+        <.modal id="eka_info">
+            <h2 class="text-bold">Background</h2>
+            <div class="prose">
+            <p >Graduated from Singapore and Australia with Degree of Business Marketing & Commerce. 
+Mrs Eka has 20 over years of operations & sales management position based in Singapore or ASEAN with business set up experiences and leadership abilities in various industries from IT Consultant & Management, Retails, education, F&B, Gaming and Agriculture/Fishery.
+            </p> <br />
+            <p>On social project & CSR, Mrs Eka ran a plastic recycle to help saving environment and social impact of plastic hazardous.
+and still running coral restoration projects in East Timor to help saving marine environment and ecosystem balance. </p>
+            <br />
+            <p>In VSOP, Mrs Eka oversees various departments from marketing, finance and sales operational daily basis to ensure the sales process implemented and continues to build strategy for company revenue growth through local and international market opportunities. She also acts as business development to create opportunity for business expansion with a vision of social responsibility.
+            </p>  </div>
+        </.modal>
 
         <!-- Member -->
         <div class="flex gap-4">
             <!-- Photo -->
-            <img alt="Logo" src="/images/male-avatar.png" class="rounded-full w-24" /> 
+            <img alt="Logo" src="/images/ekaface.jpg" class="rounded-full w-24 aspect-square" /> 
 
             <div class="flex flex-col gap-2">
                 <!-- Name -->
@@ -46,11 +58,19 @@
 
                 <!-- Role -->
                 <span class="text-sm">Marketing and Sales Manager</span>
+                
+                <!-- scott start modal -->
+                
+                  <button class="btn btn-primary"
+                          phx-click={show_modal("eka_info")}>
+                    More +
+                  </button>
+                <!-- scott end modal -->
 
                 <!-- Socials -->
                 <div class="flex text-accent text-xs">
                     <a class="btn btn-ghost btn-sm btn-circle">
-                        <i class="fa-brands fa-github text-lg"></i>
+                        <img href="images/github-mark.svg" height="20" width="20"/>
                     </a>
 
                     <a class="btn btn-ghost btn-sm btn-circle">
