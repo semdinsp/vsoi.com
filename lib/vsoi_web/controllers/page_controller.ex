@@ -25,6 +25,12 @@ defmodule VsoiWeb.PageController do
     render(conn, :vision)
   end
 
+  def eka_card(conn, _params) do
+    # The home page is often custom made,
+    # so skip the default app layout.
+    render(conn, :eka_card)
+  end
+
   def products(conn, _params) do
     # The home page is often custom made,
     # so skip the default app layout.
