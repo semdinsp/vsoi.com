@@ -99,7 +99,7 @@ defmodule VsoiWeb.CoreComponents do
   def emojilogo(assigns) do
     ~H"""
       <a href="/">
-        <p class={["text-2xl text-black", @class]} >ᯓᡣ𐭩</p>
+        <p class={["text-xl text-black", @class]} >VSOI</p>
       </a>
     """
   end
@@ -139,8 +139,8 @@ defmodule VsoiWeb.CoreComponents do
                 d="M0.892853 5.85693L11.3571 12.1502C11.678 12.3386 12.0824 12.4418 12.5 12.4418C12.9176 12.4418 13.322 12.3386 13.6429 12.1502L24.1071 5.85693"
                 stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
-            <a class="pl-3font-serif text-xs " href="mailto:info@alzheimer-memory.com"
-              target="_blank">info@alzheimer-memory.com</a>
+            <a class="pl-3font-serif text-xs " href="mailto:sales.vsoi.tl@gmail.com"
+              target="_blank">sales.vsoi.tl@gmail.com</a>
           </div>
         </div>
       </div>
