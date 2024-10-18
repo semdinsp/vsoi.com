@@ -21,6 +21,7 @@ defmodule VsoiWeb.Router do
     get "/home2", PageController, :home2
     get "/team", PageController, :team
     get "/vision", PageController, :vision
+    get "/products", PageController, :products
     get "/eka_card", PageController, :eka_card
     get "/dercia_card", PageController, :dercia_card
 
