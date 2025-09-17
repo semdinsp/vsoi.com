@@ -17,7 +17,7 @@ defmodule VsoiWeb.Router do
   scope "/", VsoiWeb do
     pipe_through :browser
 
-    get "/", PageController, :home2
+    get "/", PageController, :home
     get "/home2", PageController, :home2
     get "/team", PageController, :team
     get "/vision", PageController, :vision

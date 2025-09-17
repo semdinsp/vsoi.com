@@ -1,160 +1,158 @@
 
 
+<.nav_header />
 
-<div class="flex flex-col items-center gap-8">
-    <h1 class="font-bold text-3xl self-center">Meet the crew</h1>
+<!-- Hero Section -->
+<div class="bg-gradient-to-br from-green-50 to-emerald-100 text-gray-900 py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h1 class="text-4xl font-bold mb-4">Meet Our Team</h1>
+    <p class="text-xl opacity-90 max-w-3xl mx-auto">
+      The passionate experts behind VSOI's commitment to sustainable organic farming and quality produce distribution.
+    </p>
+  </div>
+</div>
 
-    <!-- Team -->
-    <div class="grid grid-cols-1 sm:grid-cols-3 gap-10">
-        <!-- Member -->
-        <div class="flex gap-4">
-            <!-- Photo -->
-            <img alt="Logo" src="/images/male-avatar.png" class="rounded-full w-24" /> 
+<!-- Team Section -->
+<div class="py-16 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-            <div class="flex flex-col gap-2">
-                <!-- Name -->
-                <h3 class="font-bold">Alvin XXXX</h3>
+    <!-- Team Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-                <!-- Role -->
-                <span class="text-sm">Founder / CEO</span>
-
-                <!-- Socials -->
-                <div class="flex text-accent text-xs">
-                    <a class="btn btn-ghost btn-sm btn-circle">
-                        <i class="fa-brands fa-github text-lg"></i>
-                    </a>
-
-                    <a class="btn btn-ghost btn-sm btn-circle">
-                        <i class="fa-brands fa-twitter text-lg"></i>
-                    </a>
-
-                    <a class="btn btn-ghost btn-sm btn-circle">
-                        <i class="fa-brands fa-facebook text-lg"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <.modal id="eka_info">
-            <h2 class="text-bold">Background</h2>
-            <div class="prose">
-            <p >Graduated from Singapore and Australia with Degree of Business Marketing & Commerce. 
-Mrs Eka has 20 over years of operations & sales management position based in Singapore or ASEAN with business set up experiences and leadership abilities in various industries from IT Consultant & Management, Retails, education, F&B, Gaming and Agriculture/Fishery.
-            </p> <br />
-            <p>On social project & CSR, Mrs Eka ran a plastic recycle to help saving environment and social impact of plastic hazardous.
-and still running coral restoration projects in East Timor to help saving marine environment and ecosystem balance. </p>
-            <br />
-            <p>In VSOI, Mrs Eka oversees various departments from marketing, finance and sales operational daily basis to ensure the sales process implemented and continues to build strategy for company revenue growth through local and international market opportunities. She also acts as business development to create opportunity for business expansion with a vision of social responsibility.
-            </p> 
-            <a href="eka_card">Eka Business Card</a> </div>
-        </.modal>
-
-        <div class="hidden"> Icons for bug in phoenix fix in future
-            <.icon name="hero-photo" />
-            <.icon name="hero-image" />
-            <.icon name="hero-document-text" />
-            <.icon name="hero-film" />
-            <.icon name="hero-clock" />
-            <.icon name="hero-envelope" />
+      <!-- Eka Mardiarti -->
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+        <div class="p-6 text-center">
+          <img alt="Eka Mardiarti" src="/images/ekaface.jpg" class="rounded-full w-32 h-32 mx-auto mb-4 object-cover border-4 border-primary" />
+          <h3 class="font-bold text-xl text-gray-900 mb-2">Eka Mardiarti</h3>
+          <p class="text-primary font-medium mb-4">Business Development & Sales Manager</p>
+          <p class="text-gray-600 text-sm mb-6">
+            Leading VSOI's growth strategy with 20+ years in operations & sales management across Singapore and ASEAN. Expert in sustainable agriculture and social responsibility initiatives.
+          </p>
+          <div class="flex justify-center gap-3">
+            <button class="btn btn-primary btn-sm" phx-click={show_modal("eka_info")}>
+              <.icon name="hero-information-circle" class="h-4 w-4 mr-1" />
+              Learn More
+            </button>
+            <a href="/eka_card" class="btn btn-outline btn-sm">
+              <.icon name="hero-envelope" class="h-4 w-4 mr-1" />
+              Contact
+            </a>
           </div>
-
-        <!-- Member -->
-        <div class="flex gap-4">
-            <!-- Photo -->
-            <img alt="Logo" src="/images/ekaface.jpg" class="rounded-full w-24 aspect-square" /> 
-
-            <div class="flex flex-col gap-2">
-                <!-- Name -->
-                <h3 class="font-bold"> 
-                    <a href="eka_card">Eka Mardiarti</a>
-                </h3>
-
-                <!-- Role -->
-                <span class="text-sm">Marketing and Sales Manager</span>
-                
-                <!-- scott start modal -->
-                
-                  <button class="btn btn-primary"
-                          phx-click={show_modal("eka_info")}>
-                    More +
-                  </button>
-                <!-- scott end modal -->
-
-                <!-- Socials -->
-                <div class="flex text-accent text-xs">
-                   <!-- <a class="btn btn-ghost btn-sm btn-circle">
-                        <img href="images/github-mark.svg" height="20" width="20"/>
-                    </a>  -->
-
-                    <a class="btn btn-ghost btn-sm btn-circle">
-                        <a href="/eka_card" > <.icon name="hero-envelope"  /> </a>
-                    </a>
-
-                    <!-- <a class="btn btn-ghost btn-sm btn-circle">
-                        <i class="fa-brands fa-facebook text-lg"></i>
-                    </a>   -->
-                </div>
-            </div>
         </div>
+      </div>
 
-        <!-- Member -->
-        <div class="flex gap-4">
-            <!-- Photo -->
-            <img alt="Logo" src="/images/male-avatar.png" class="rounded-full w-24" /> 
-
-            <div class="flex flex-col gap-2">
-                <!-- Name -->
-                <h3 class="font-bold">Ebele Egbuna</h3>
-
-                <!-- Role -->
-                <span class="text-sm">Support consultant</span>
-
-                <!-- Socials -->
-                <div class="flex text-accent text-xs">
-                    <a class="btn btn-ghost btn-sm btn-circle">
-                        <i class="fa-brands fa-github text-lg"></i>
-                    </a>
-
-                    <a class="btn btn-ghost btn-sm btn-circle">
-                        <i class="fa-brands fa-twitter text-lg"></i>
-                    </a>
-
-                    <a class="btn btn-ghost btn-sm btn-circle">
-                        <i class="fa-brands fa-facebook text-lg"></i>
-                    </a>
-                </div>
-            </div>
+      <!-- Dircia Maria Da Costa -->
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+        <div class="p-6 text-center">
+          <img alt="Dircia Maria Da Costa" src="/images/male-avatar.png" class="rounded-full w-32 h-32 mx-auto mb-4 object-cover border-4 border-info" />
+          <h3 class="font-bold text-xl text-gray-900 mb-2">Dircia Maria Da Costa</h3>
+          <p class="text-info font-medium mb-4">Sales & Marketing Specialist</p>
+          <p class="text-gray-600 text-sm mb-6">
+            Specializes in building relationships with local and international clients, ensuring VSOI's organic produce reaches health-conscious consumers worldwide.
+          </p>
+          <div class="flex justify-center gap-3">
+            <a href="/dercia_card" class="btn btn-info btn-sm">
+              <.icon name="hero-envelope" class="h-4 w-4 mr-1" />
+              Contact
+            </a>
+            <a href="mailto:sales.vsoi.tl@gmail.com" class="btn btn-outline btn-sm">
+              <.icon name="hero-chat-bubble-left" class="h-4 w-4 mr-1" />
+              Email
+            </a>
+          </div>
         </div>
+      </div>
 
-        <!-- Member -->
-        <div class="flex gap-4">
-            <!-- Photo -->
-            <img alt="Logo" src="/images/male-avatar.png" class="rounded-full w-24" /> 
-
-            <div class="flex flex-col gap-2">
-                <!-- Name -->
-                <h3 class="font-bold">Maria Powers</h3>
-
-                <!-- Role -->
-                <span class="text-sm">Something</span>
-
-                <!-- Socials -->
-                <div class="flex text-accent text-xs">
-                    <a class="btn btn-ghost btn-sm btn-circle">
-                        <i class="fa-brands fa-github text-lg"></i>
-                    </a>
-
-                    <a class="btn btn-ghost btn-sm btn-circle">
-                        <i class="fa-brands fa-twitter text-lg"></i>
-                    </a>
-
-                    <a class="btn btn-ghost btn-sm btn-circle">
-                        <i class="fa-brands fa-facebook text-lg"></i>
-                    </a>
-                </div>
-            </div>
+      <!-- Agriculture Team Lead -->
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+        <div class="p-6 text-center">
+          <img alt="Agriculture Team" src="/images/male-avatar.png" class="rounded-full w-32 h-32 mx-auto mb-4 object-cover border-4 border-success" />
+          <h3 class="font-bold text-xl text-gray-900 mb-2">Local Farming Team</h3>
+          <p class="text-success font-medium mb-4">Organic Agriculture Specialists</p>
+          <p class="text-gray-600 text-sm mb-6">
+            Our dedicated team of local farmers and agriculture experts who ensure every crop meets our strict organic standards using traditional and smart farming techniques.
+          </p>
+          <div class="flex justify-center gap-3">
+            <a href="/products" class="btn btn-success btn-sm">
+              <.icon name="hero-leaf" class="h-4 w-4 mr-1" />
+              View Products
+            </a>
+            <a href="/vision" class="btn btn-outline btn-sm">
+              <.icon name="hero-eye" class="h-4 w-4 mr-1" />
+              Our Vision
+            </a>
+          </div>
         </div>
+      </div>
 
-      
     </div>
+
+    <!-- Company Values -->
+    <div class="mt-16 bg-white rounded-lg p-8">
+      <h2 class="text-3xl font-bold text-center text-gray-900 mb-8">Our Team Values</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="text-center">
+          <div class="w-16 h-16 bg-primary rounded-full mx-auto mb-4 flex items-center justify-center">
+            <span class="hero-hand-heart text-white text-2xl"></span>
+          </div>
+          <h3 class="font-bold text-lg mb-2">Sustainability First</h3>
+          <p class="text-gray-600">Every decision is made with environmental impact and long-term sustainability in mind.</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 bg-info rounded-full mx-auto mb-4 flex items-center justify-center">
+            <span class="hero-users text-white text-2xl"></span>
+          </div>
+          <h3 class="font-bold text-lg mb-2">Community Impact</h3>
+          <p class="text-gray-600">Supporting local farmers and communities while building a stronger food system in Timor Leste.</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 bg-success rounded-full mx-auto mb-4 flex items-center justify-center">
+            <span class="hero-shield-check text-white text-2xl"></span>
+          </div>
+          <h3 class="font-bold text-lg mb-2">Quality Assurance</h3>
+          <p class="text-gray-600">Maintaining the highest standards of organic certification and product quality.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Eka Modal -->
+<.modal id="eka_info">
+  <div class="p-6">
+    <h2 class="text-2xl font-bold mb-4 text-primary">Eka Mardiarti - Background</h2>
+    <div class="prose max-w-none">
+      <p class="mb-4">
+        Graduated from Singapore and Australia with a Degree in Business Marketing & Commerce.
+        Mrs Eka has 20+ years of operations & sales management experience based in Singapore and ASEAN regions, with business setup expertise and leadership abilities across various industries including IT Consulting & Management, Retail, Education, F&B, Gaming, and Agriculture/Fishery.
+      </p>
+      <p class="mb-4">
+        Through social projects & CSR initiatives, Mrs Eka has led plastic recycling programs to help save the environment and address plastic pollution impacts. She continues to run coral restoration projects in East Timor to help preserve marine environments and ecosystem balance.
+      </p>
+      <p class="mb-6">
+        At VSOI, Mrs Eka oversees multiple departments including marketing, finance, and sales operations on a daily basis to ensure effective sales processes and continues to build strategies for company revenue growth through local and international market opportunities. She also serves as business development lead to create expansion opportunities with a vision of social responsibility.
+      </p>
+      <div class="flex gap-4">
+        <a href="/eka_card" class="btn btn-primary">
+          <.icon name="hero-identification" class="h-5 w-5 mr-2" />
+          View Business Card
+        </a>
+        <a href="mailto:sales.vsoi.tl@gmail.com" class="btn btn-outline">
+          <.icon name="hero-envelope" class="h-5 w-5 mr-2" />
+          Contact Eka
+        </a>
+      </div>
+    </div>
+  </div>
+</.modal>
+
+<!-- Hidden Icons (fix for Phoenix bug) -->
+<div class="hidden">
+  <.icon name="hero-photo" />
+  <.icon name="hero-image" />
+  <.icon name="hero-document-text" />
+  <.icon name="hero-film" />
+  <.icon name="hero-clock" />
+  <.icon name="hero-envelope" />
 </div>
 

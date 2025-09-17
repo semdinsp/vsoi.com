@@ -117,14 +117,14 @@ defmodule VsoiWeb.CoreComponents do
   def footer(assigns) do
     ~H"""
     <footer>
-      <div class="w-full flex justify-center bg-primary">
+      <div class="w-full flex justify-center bg-gradient-to-br from-green-50 to-emerald-100">
       <div
         class=" md:px-16 px-8 py-2 flex md:flex-row flex-col items-center gap-2 justify-between w-full">
         <!--<img class="items-center" src={@logosrc} alt="Alazheimer" height="30" width="30" />  -->
         <.emojilogo/>
-        <div class=" font-serif text-xs text-center row-start-2">
+        <div class=" font-serif text-xs text-center row-start-2 text-gray-900">
           2024 &copy; Verde Smart Organiku International <br />
-          <a href="/privacy" >Privacy Policy and Terms of Service</a>
+          <a href="/privacy" class="text-gray-700 hover:text-gray-900">Privacy Policy and Terms of Service</a>
 
         </div>
 
@@ -134,12 +134,12 @@ defmodule VsoiWeb.CoreComponents do
             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="26" viewBox="0 0 25 26" fill="none">
               <path
                 d="M22.3214 3.625H2.67857C1.69234 3.625 0.892853 4.4245 0.892853 5.41071V20.5893C0.892853 21.5755 1.69234 22.375 2.67857 22.375H22.3214C23.3077 22.375 24.1071 21.5755 24.1071 20.5893V5.41071C24.1071 4.4245 23.3077 3.625 22.3214 3.625Z"
-                stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                stroke="#374151" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
               <path
                 d="M0.892853 5.85693L11.3571 12.1502C11.678 12.3386 12.0824 12.4418 12.5 12.4418C12.9176 12.4418 13.322 12.3386 13.6429 12.1502L24.1071 5.85693"
-                stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                stroke="#374151" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
-            <a class="pl-3font-serif text-xs " href="mailto:sales.vsoi.tl@gmail.com"
+            <a class="pl-3 font-serif text-xs text-gray-700 hover:text-gray-900" href="mailto:sales.vsoi.tl@gmail.com"
               target="_blank">sales.vsoi.tl@gmail.com</a>
           </div>
         </div>
@@ -765,6 +765,85 @@ defmodule VsoiWeb.CoreComponents do
     else
       Gettext.dgettext(VsoiWeb.Gettext, "errors", msg, opts)
     end
+  end
+
+  @doc """
+  Renders a navigation header for pages without app layout.
+  """
+  def nav_header(assigns) do
+    ~H"""
+    <header class="bg-gradient-to-br from-green-50 to-emerald-100 text-gray-900 sticky top-0 z-40 shadow-sm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <!-- Logo and Brand -->
+          <div class="flex items-center">
+            <a href="/" class="flex items-center space-x-3 hover:opacity-80 transition-opacity">
+              <img src="/images/vsoilogo.jpg" alt="VSOI Logo" class="w-10 h-10 rounded-full" />
+              <div class="max-sm:hidden">
+                <div class="text-lg font-bold">VSOI</div>
+                <div class="text-xs opacity-90">Verde Smart Organiku International</div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Navigation Links -->
+          <nav class="hidden md:flex space-x-6">
+            <a href="/products" class="flex items-center px-3 py-2 rounded-md text-sm font-medium hover:bg-white hover:bg-opacity-10 transition-colors">
+              <.icon name="hero-leaf" class="h-4 w-4 mr-2" />
+              Products
+            </a>
+            <a href="/vision" class="flex items-center px-3 py-2 rounded-md text-sm font-medium hover:bg-white hover:bg-opacity-10 transition-colors">
+              <.icon name="hero-eye" class="h-4 w-4 mr-2" />
+              Vision & Mission
+            </a>
+            <a href="/team" class="flex items-center px-3 py-2 rounded-md text-sm font-medium hover:bg-white hover:bg-opacity-10 transition-colors">
+              <.icon name="hero-user-group" class="h-4 w-4 mr-2" />
+              Team
+            </a>
+            <a href="/" class="flex items-center px-3 py-2 rounded-md text-sm font-medium hover:bg-white hover:bg-opacity-10 transition-colors">
+              <.icon name="hero-home" class="h-4 w-4 mr-2" />
+              Home
+            </a>
+          </nav>
+
+          <!-- Mobile menu button -->
+          <div class="md:hidden">
+            <button
+              type="button"
+              class="inline-flex items-center justify-center p-2 rounded-md hover:bg-white hover:bg-opacity-10 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-400"
+              aria-controls="mobile-menu"
+              aria-expanded="false"
+            >
+              <span class="sr-only">Open main menu</span>
+              <.icon name="hero-bars-3" class="h-6 w-6" />
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden" id="mobile-menu">
+          <div class="px-2 pt-2 pb-3 space-y-1 border-t border-gray-300">
+            <a href="/products" class="flex items-center px-3 py-2 rounded-md text-base font-medium hover:bg-white hover:bg-opacity-10">
+              <.icon name="hero-leaf" class="h-5 w-5 mr-3" />
+              Products
+            </a>
+            <a href="/vision" class="flex items-center px-3 py-2 rounded-md text-base font-medium hover:bg-white hover:bg-opacity-10">
+              <.icon name="hero-eye" class="h-5 w-5 mr-3" />
+              Vision & Mission
+            </a>
+            <a href="/team" class="flex items-center px-3 py-2 rounded-md text-base font-medium hover:bg-white hover:bg-opacity-10">
+              <.icon name="hero-user-group" class="h-5 w-5 mr-3" />
+              Team
+            </a>
+            <a href="/" class="flex items-center px-3 py-2 rounded-md text-base font-medium hover:bg-white hover:bg-opacity-10">
+              <.icon name="hero-home" class="h-5 w-5 mr-3" />
+              Home
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    """
   end
 
   @doc """

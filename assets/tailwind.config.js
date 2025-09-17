@@ -19,18 +19,47 @@ module.exports = {
     },
   },
   daisyui: {
-    themes: ["emerald", "dark", "cupcake"], // true: all themes | false: only light + dark | array: specific themes like this ["light", "dark", "cupcake"]
-    darkTheme: "emerald", // name of one of the included themes for dark mode
-    base: true, // applies background color and foreground color for root element by default
-    styled: true, // include daisyUI colors and design decisions for all components
-    utils: true, // adds responsive and modifier utility classes
-    rtl: false, // rotate style direction from left-to-right to right-to-left. You also need to add dir="rtl" to your html tag and install `tailwindcss-flip` plugin for Tailwind CSS.
-    prefix: "", // prefix for daisyUI classnames (components, modifiers and responsive class names. Not colors)
-    logs: false, // <-- to remove logs from the console.
-},
+    themes: [
+      {
+        vsoi: {
+          "primary": "#059669",        // emerald-600 - main brand green
+          "primary-content": "#ffffff",
+          "secondary": "#10b981",      // emerald-500 - secondary green
+          "secondary-content": "#ffffff",
+          "accent": "#f59e0b",         // amber-500 - organic/natural accent
+          "accent-content": "#ffffff",
+          "neutral": "#374151",        // gray-700
+          "neutral-content": "#ffffff",
+          "base-100": "#ffffff",       // white background
+          "base-200": "#f9fafb",       // gray-50
+          "base-300": "#f3f4f6",       // gray-100
+          "base-content": "#111827",   // gray-900
+          "info": "#3b82f6",           // blue-500
+          "info-content": "#ffffff",
+          "success": "#22c55e",        // green-500
+          "success-content": "#ffffff",
+          "warning": "#f59e0b",        // amber-500
+          "warning-content": "#ffffff",
+          "error": "#ef4444",          // red-500
+          "error-content": "#ffffff",
+        }
+      },
+      "emerald",
+      "dark",
+      "cupcake"
+    ],
+    darkTheme: "dark",
+    base: true,
+    styled: true,
+    utils: true,
+    rtl: false,
+    prefix: "",
+    logs: false,
+  },
   plugins: [
     require("daisyui"),
     require("@tailwindcss/forms"),
+    require("@tailwindcss/typography"),
     // Allows prefixing tailwind classes with LiveView classes to add rules
     // only when LiveView classes are applied, for example:
     //

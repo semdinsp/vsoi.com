@@ -16,13 +16,13 @@ defmodule VsoiWeb.PageController do
   def team(conn, _params) do
     # The home page is often custom made,
     # so skip the default app layout.
-    render(conn, :team)
+    render(conn, :team, layout: false)
   end
 
   def vision(conn, _params) do
     # The home page is often custom made,
     # so skip the default app layout.
-    render(conn, :vision)
+    render(conn, :vision, layout: false)
   end
 
   def eka_card(conn, _params) do
@@ -38,6 +38,6 @@ defmodule VsoiWeb.PageController do
   def products(conn, _params) do
     # The home page is often custom made,
     # so skip the default app layout.
-    render(conn, :products)
+    render(conn, :products, layout: false)
   end
 end
