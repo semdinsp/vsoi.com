@@ -176,7 +176,7 @@ defmodule VsoiWeb.CoreComponents do
             <a href="/products"
                class="flex items-center px-3 py-2 rounded-md text-sm font-medium text-white hover:bg-white hover:bg-opacity-20 transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
                aria-label="View our organic products">
-              <.icon name="hero-leaf" class="h-4 w-4 mr-2" />
+              <.icon name="hero-shopping-bag" class="h-4 w-4 mr-2" />
               Products
             </a>
             <a href="/team"
@@ -211,7 +211,7 @@ defmodule VsoiWeb.CoreComponents do
           <div class="px-2 pt-2 pb-3 space-y-1 border-t border-white border-opacity-20">
             <a href="/products"
                class="flex items-center px-3 py-2 rounded-md text-base font-medium text-white hover:bg-white hover:bg-opacity-20 transition-colors">
-              <.icon name="hero-leaf" class="h-5 w-5 mr-3" />
+              <.icon name="hero-shopping-bag" class="h-5 w-5 mr-3" />
               Products
             </a>
             <a href="/team"
@@ -831,7 +831,7 @@ defmodule VsoiWeb.CoreComponents do
           <!-- Navigation Links -->
           <nav class="hidden md:flex space-x-6">
             <a href="/products" class="flex items-center px-3 py-2 rounded-md text-sm font-medium hover:bg-white hover:bg-opacity-10 transition-colors">
-              <.icon name="hero-leaf" class="h-4 w-4 mr-2" />
+              <.icon name="hero-shopping-bag" class="h-4 w-4 mr-2" />
               Products
             </a>
             <a href="/vision" class="flex items-center px-3 py-2 rounded-md text-sm font-medium hover:bg-white hover:bg-opacity-10 transition-colors">
@@ -866,7 +866,7 @@ defmodule VsoiWeb.CoreComponents do
         <div class="md:hidden hidden" id="mobile-menu">
           <div class="px-2 pt-2 pb-3 space-y-1 border-t border-gray-300">
             <a href="/products" class="flex items-center px-3 py-2 rounded-md text-base font-medium hover:bg-white hover:bg-opacity-10">
-              <.icon name="hero-leaf" class="h-5 w-5 mr-3" />
+              <.icon name="hero-shopping-bag" class="h-5 w-5 mr-3" />
               Products
             </a>
             <a href="/vision" class="flex items-center px-3 py-2 rounded-md text-base font-medium hover:bg-white hover:bg-opacity-10">
