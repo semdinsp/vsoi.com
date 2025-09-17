@@ -95,11 +95,11 @@ defmodule VsoiWeb.CoreComponents do
   """
   attr :class, :string, default: nil
 
-
   def emojilogo(assigns) do
     ~H"""
-      <a href="/">
-        <p class={["text-xl text-black", @class]} >VSOI</p>
+      <a href="/" class="flex items-center space-x-2 hover:opacity-80 transition-opacity" aria-label="VSOI Home">
+        <img src="/images/vsoilogo.jpg" alt="VSOI Logo" class="w-8 h-8 rounded-full object-cover" />
+        <span class={["text-lg font-semibold text-gray-900", @class]}>VSOI</span>
       </a>
     """
   end
@@ -116,74 +116,116 @@ defmodule VsoiWeb.CoreComponents do
 
   def footer(assigns) do
     ~H"""
-    <footer>
-      <div class="w-full flex justify-center bg-gradient-to-br from-green-50 to-emerald-100">
-      <div
-        class=" md:px-16 px-8 py-2 flex md:flex-row flex-col items-center gap-2 justify-between w-full">
-        <!--<img class="items-center" src={@logosrc} alt="Alazheimer" height="30" width="30" />  -->
-        <.emojilogo/>
-        <div class=" font-serif text-xs text-center row-start-2 text-gray-900">
-          2024 &copy; Verde Smart Organiku International <br />
-          <a href="/privacy" class="text-gray-700 hover:text-gray-900">Privacy Policy and Terms of Service</a>
+    <footer class="bg-gradient-to-br from-green-50 to-emerald-100 border-t border-green-200" role="contentinfo">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+          <!-- Logo and Brand -->
+          <div class="flex items-center">
+            <.emojilogo class="text-gray-900" />
+          </div>
 
-        </div>
+          <!-- Copyright and Links -->
+          <div class="text-center md:text-left">
+            <p class="text-sm text-gray-600">
+              &copy; 2024 Verde Smart Organiku International. All rights reserved.
+            </p>
+            <p class="text-xs text-gray-500 mt-1">
+              Committed to sustainable organic farming in Timor Leste
+            </p>
+          </div>
 
-        <div class=" justify-right items-right  md:top-0 md:right-0">
-          <!-- was <div class="flex flex-col justify-right items-right"> -->
-          <div class="flex mb-2 items-center md:start-col-20">
-            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="26" viewBox="0 0 25 26" fill="none">
-              <path
-                d="M22.3214 3.625H2.67857C1.69234 3.625 0.892853 4.4245 0.892853 5.41071V20.5893C0.892853 21.5755 1.69234 22.375 2.67857 22.375H22.3214C23.3077 22.375 24.1071 21.5755 24.1071 20.5893V5.41071C24.1071 4.4245 23.3077 3.625 22.3214 3.625Z"
-                stroke="#374151" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-              <path
-                d="M0.892853 5.85693L11.3571 12.1502C11.678 12.3386 12.0824 12.4418 12.5 12.4418C12.9176 12.4418 13.322 12.3386 13.6429 12.1502L24.1071 5.85693"
-                stroke="#374151" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-            <a class="pl-3 font-serif text-xs text-gray-700 hover:text-gray-900" href="mailto:sales.vsoi.tl@gmail.com"
-              target="_blank">sales.vsoi.tl@gmail.com</a>
+          <!-- Contact Information -->
+          <div class="flex items-center space-x-2">
+            <.icon name="hero-envelope" class="h-5 w-5 text-gray-600" />
+            <a
+              href="mailto:sales.vsoi.tl@gmail.com"
+              class="text-sm text-gray-600 hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50 rounded"
+              aria-label="Contact us via email">
+              sales.vsoi.tl@gmail.com
+            </a>
           </div>
         </div>
       </div>
-    </div>
     </footer>
     """
   end
 
-    @doc """
-  Renders an appheaader with title.
+  @doc """
+  Renders an appheader with title.
   """
   attr :class, :string, default: nil
 
-  slot :inner_block, required: true
-  slot :subtitle
-  slot :actions
-
   def appheader(assigns) do
     ~H"""
-    <header class="px-4 sm:px-6 lg:px-8 w-full flex bg-primary ">
-     <div class="flex items-center justify-between border-b border-zinc-100 py-1 text-sm">
-       <div class="flex items-center gap-4">
-       <a href="/">
-       <img src="/images/vsoilogo.jpg" width="40" height="40" />
-       </a><a href="/"> VSOI
-       <small>Verde Smart Organiku International</small>
-       </a>
-       <!--   WAS <img src="/images/logo.svg" width="30" />  -->
-       </div>
-        <div class="flex space-x-4 justify-end  gap-4 font-semibold leading-2 ">
-         <a href="/products" class="rounded-lg flex justify-center hover:text-primary hover:bg-zinc-100   px-2 py-1 ">
-           <.icon name="hero-photo" class="mr-1"/>
-           <div class="max-sm:hidden">Products</div>
-         </a>
-         <a href="/team" class="rounded-lg flex justify-center hover:text-black    px-2 py-1 hover:bg-zinc-100">
-          <.icon name="hero-user-group" class="mr-1"/>
-          <div class="max-sm:hidden">Team</div>
-         </a>
-         <a href="/vision" class="rounded-lg flex justify-center hover:text-black   px-2 py-1 hover:bg-zinc-100">
-          <.icon name="hero-arrow-trending-up" class="mr-1"/>
-          <div class="max-sm:hidden">Vision</div>
-         </a>
-       </div>
+    <header class="bg-primary text-white sticky top-0 z-50 shadow-lg">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <!-- Logo and Brand -->
+          <div class="flex items-center">
+            <a href="/" class="flex items-center space-x-3 hover:opacity-80 transition-opacity" aria-label="VSOI Home">
+              <img src="/images/vsoilogo.jpg" alt="VSOI Logo" class="w-10 h-10 rounded-full object-cover" />
+              <div class="hidden sm:block">
+                <div class="text-lg font-bold">VSOI</div>
+                <div class="text-xs opacity-90">Verde Smart Organiku International</div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Desktop Navigation -->
+          <nav class="hidden md:flex items-center space-x-1" role="navigation" aria-label="Main navigation">
+            <a href="/products"
+               class="flex items-center px-3 py-2 rounded-md text-sm font-medium text-white hover:bg-white hover:bg-opacity-20 transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
+               aria-label="View our organic products">
+              <.icon name="hero-leaf" class="h-4 w-4 mr-2" />
+              Products
+            </a>
+            <a href="/team"
+               class="flex items-center px-3 py-2 rounded-md text-sm font-medium text-white hover:bg-white hover:bg-opacity-20 transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
+               aria-label="Meet our team">
+              <.icon name="hero-user-group" class="h-4 w-4 mr-2" />
+              Team
+            </a>
+            <a href="/vision"
+               class="flex items-center px-3 py-2 rounded-md text-sm font-medium text-white hover:bg-white hover:bg-opacity-20 transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
+               aria-label="Learn about our vision">
+              <.icon name="hero-arrow-trending-up" class="h-4 w-4 mr-2" />
+              Vision
+            </a>
+          </nav>
+
+          <!-- Mobile Menu Button -->
+          <div class="md:hidden">
+            <button
+              type="button"
+              class="inline-flex items-center justify-center p-2 rounded-md text-white hover:bg-white hover:bg-opacity-20 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
+              aria-expanded="false"
+              aria-label="Open main menu"
+              phx-click={toggle_mobile_menu()}>
+              <.icon name="hero-bars-3" class="h-6 w-6" />
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div class="md:hidden hidden" id="mobile-menu">
+          <div class="px-2 pt-2 pb-3 space-y-1 border-t border-white border-opacity-20">
+            <a href="/products"
+               class="flex items-center px-3 py-2 rounded-md text-base font-medium text-white hover:bg-white hover:bg-opacity-20 transition-colors">
+              <.icon name="hero-leaf" class="h-5 w-5 mr-3" />
+              Products
+            </a>
+            <a href="/team"
+               class="flex items-center px-3 py-2 rounded-md text-base font-medium text-white hover:bg-white hover:bg-opacity-20 transition-colors">
+              <.icon name="hero-user-group" class="h-5 w-5 mr-3" />
+              Team
+            </a>
+            <a href="/vision"
+               class="flex items-center px-3 py-2 rounded-md text-base font-medium text-white hover:bg-white hover:bg-opacity-20 transition-colors">
+              <.icon name="hero-arrow-trending-up" class="h-5 w-5 mr-3" />
+              Vision
+            </a>
+          </div>
+        </div>
       </div>
     </header>
     """
@@ -844,6 +886,11 @@ defmodule VsoiWeb.CoreComponents do
       </div>
     </header>
     """
+  end
+
+  def toggle_mobile_menu(js \\ %JS{}) do
+    js
+    |> JS.toggle(to: "#mobile-menu", in: {"ease-out duration-100", "opacity-0 scale-95", "opacity-100 scale-100"}, out: {"ease-in duration-75", "opacity-100 scale-100", "opacity-0 scale-95"})
   end
 
   @doc """
