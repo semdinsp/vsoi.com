@@ -99,7 +99,7 @@ defmodule VsoiWeb.UXImprovementsTest do
         response = html_response(conn, 200)
 
         # Each page should have the unified header
-        assert response =~ "bg-primary text-white sticky top-0"
+        assert response =~ "bg-gradient-to-r from-emerald-500 to-green-500 text-white sticky top-0"
         assert response =~ "VSOI"
         assert response =~ "Verde Smart Organiku International"
 

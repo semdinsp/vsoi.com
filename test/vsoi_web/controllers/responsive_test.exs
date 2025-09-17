@@ -50,7 +50,7 @@ defmodule VsoiWeb.ResponsiveTest do
       html = html_response(conn, 200)
 
       # Check for mobile navigation features
-      assert html =~ "max-sm:hidden"  # Text hidden on small screens
+      assert html =~ "hidden sm:block"  # Text hidden on small screens, visible on larger
       assert html =~ "flex items-center justify-between"  # Mobile-friendly layout
       assert html =~ "px-4 sm:px-6 lg:px-8"  # Responsive padding
     end

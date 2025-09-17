@@ -157,7 +157,7 @@ defmodule VsoiWeb.CoreComponents do
 
   def appheader(assigns) do
     ~H"""
-    <header class="bg-primary text-white sticky top-0 z-50 shadow-lg">
+    <header class="bg-gradient-to-r from-emerald-500 to-green-500 text-white sticky top-0 z-50 shadow-lg">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-16">
           <!-- Logo and Brand -->
